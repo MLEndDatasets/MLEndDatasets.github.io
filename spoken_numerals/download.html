@@ -1,0 +1,71 @@
+<br>
+<br>
+
+<h3 style="font-weight:600; font-family: sans-serif;"> Download Data</h3>
+
+<h4 style="font-weight:600; font-family: sans-serif;"> Install mlend</h4>
+
+To download the Spoken Numerals dataset, first step is to install <a href='https://pypi.org/project/mlend' target='_blank'><code>mlend</code></a> library. Use pip to install library.
+<br>
+<br>
+
+<pre><code>pip install mlend</code></pre>
+
+<br>
+<br>
+<h4 style="font-weight:600; font-family: sans-serif;"> Download subset of data</h4>
+
+To download subset of the data, only 2 numerals 1 and 100 with neutral intonation, use following piece of code:
+<br>
+<br>
+
+<pre><code class="python">import mlend
+from mlend import download_spoken_numerals, spoken_numerals_load
+
+subset = {'Numeral':[1,100],'Intonation':['neutral']}
+datadir = download_spoken_numerals(save_to = '../MLEnd', 
+                                   subset = subset,verbose=1,overwrite=False)
+
+</code></pre>
+
+This code will download data in given path ('../MLEnd') and returns the path of data as <code>datadir (='../MLEnd/spoken_numerals')</code>
+
+
+<br>
+<br>
+<h4 style="font-weight:600; font-family: sans-serif;"> Download full dataset</h4>
+
+To download full dataset, use empty subset, as in following piece of code:
+<br>
+<br>
+
+<pre><code class="python">import mlend
+from mlend import download_spoken_numerals, spoken_numerals_load
+
+subset = {}
+datadir = download_spoken_numerals(save_to = '../MLEnd', 
+                                   subset = subset,verbose=1,overwrite=False)
+
+</code></pre>
+
+<br> 
+<br>
+<h3 style="font-weight:600; font-family: sans-serif;"> Load the Data and benchmark sets</h3>
+
+After downloading partial or full dataset, mlend allows you to load the dataset with specified method of training and testing split.
+Note, mlend doesn't read and load the audio files in memory, instead it reads the path of files, for further reading and cleaning data as per requirement of the model. For more details, check <code>help(spoken_numerals_load)</code>.
+
+<br> 
+<pre><code class="python">import mlend
+from mlend import download_spoken_numerals, spoken_numerals_load
+
+subset = {'Numeral':[1,100],'Intonation':['neutral']}
+datadir = download_spoken_numerals(save_to = '../MLEnd', 
+                                   subset = subset,verbose=1,overwrite=False)
+
+TrainSet, TestSet, MAPs = spoken_numerals_load(datadir_main = datadir, 
+                             train_test_split = 'Benchmark_A',
+                              verbose=1,encode_labels=True)
+
+
+</code></pre>
