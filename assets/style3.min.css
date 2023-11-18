@@ -566,38 +566,6 @@ div.input-group-addon i.fa {
   }
 }
 
-.card-deck-gallery {
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-direction: column;
-  flex-direction: column
-}
-
-.card-deck-gallery .card {
-  margin-bottom: 15px
-}
-
-@media(min-width:425px) {
-  .card-deck-gallery {
-    -ms-flex-flow: row wrap;
-    flex-flow: row wrap;
-    margin-right: 0;
-    margin-left: 0
-  }
-
-  .card-deck-gallery .card {
-    display: -ms-flexbox;
-    display: flex;
-    -ms-flex: 1 0 0;
-    flex: 1 0 0;
-    -ms-flex-direction: column;
-    flex-direction: column;
-    margin-right: 15px;
-    margin-bottom: 15px;
-    margin-left: 15px
-  }
-}
-
 .card-columns .card {
   margin-bottom: .75rem
 }
@@ -768,21 +736,6 @@ div.card-body img {
     max-width: calc(50% - 30px)
   }
 }
-
-
-
-@media(min-width:768px) {
-  .card-deck-gallery .card {
-    max-width: calc(32% - 20px)
-  }
-}
-/*NikB --to change the mobile view */
-@media(min-width:425px) and (max-width:768px) {
-  .card-deck-gallery .card {
-    max-width: calc(50% - 30px)
-  }
-}
-
 
 .btn-default {
   padding-left: 0;

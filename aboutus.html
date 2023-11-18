@@ -11,17 +11,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="keywords" content="machine learning, datasets, MLEnd, data science, PML">
     <!-- <title>Teaching</title> -->
+    <!-- CSS -->
     <link href="https://MLEndDatasets.github.io/" rel="canonical">
     <link href="/assets/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/style.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/style_nb.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="/assets/style2.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="/assets/fonts/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/katex.min.css" rel="stylesheet">
+    <link href="/assets/article.min.css" rel="stylesheet">
+    <!-- JS -->
     <script src="/assets/jquery.min.js"></script>
     <script src="/assets/bootstrap.min.js"></script>
     <script defer="" src="/assets/underscore-min.js" type="text/javascript"></script>
     <script async="" src="/assets/js"></script>
     <script src="/assets/ga.min.js"></script>
     <script defer="" src="/assets/article.min.js"></script>
-    <!-- <script defer="" src="/assets/lang.min.js"></script> -->
+    <script defer="" src="/assets/lang.min.js"></script>
+    <script defer="" src="/assets/katex.min.js"></script>
+    <script crossorigin="anonymous" defer="" src="/assets/auto-render.min.js"></script>
+    <script defer="" src="/assets/buttons.js"></script>
+
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
@@ -88,7 +99,7 @@
         class="navbar-brand" href="/" onclick="trackOutboundLink(this);"> <img alt="NikB" src="/assets/imgs/home.svg" style="padding: 15px 15px; width: 80px; margin-left: 15px; margin-right: 5px;"> </a>
       <p class="navbar-text">
         <a href="/" onclick="trackOutboundLink(this);"><font size="6" color="#FFFFFF">MLEnd Datasets</font></a>
-        <!-- <h2  style="color:rgb(245, 241, 240);"> MLEnd Projects </h2> -->
+        <!-- <p style="font-size:1.8em;">MLEnd Datasets</p> -->
       </p>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -100,8 +111,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-center">
         <li><a href="/gallery/" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">Gallery</font> </a></li>
-        <li><a href="https://github.com/MLEndDatasets" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">Github</font> </a></li>
-        <li><a href="https://www.kaggle.com/jesusrequena/datasets" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">Kaggle</font> </a></li>
+        <li><a href="https://github.com/MLEndDatasets" onclick="trackOutboundLink(this);" target="_blank"><br><font size="5" color="#FFFFFF">Github</font> </a></li>
+        <li><a href="https://www.kaggle.com/jesusrequena/datasets" onclick="trackOutboundLink(this);" target="_blank"><br><font size="5" color="#FFFFFF">Kaggle</font> </a></li>
         <li><a href="/aboutus" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">About Us</font> </a></li>
       </ul>
       <div class="collapse navbar-collapse" data-target="None" id="HiddenNavbar">
@@ -125,27 +136,277 @@
 <div class="bodywrapper">
   <div class="body" role="main">
     <div class="container">
-      <article class="markdown-body entry-content" itemprop=text>
-        <br>
-        <br>
+      <!-- <article class="markdown-body entry-content" itemprop=text> -->
+        <!-- <br> -->
+        <!-- <br> -->
       <p><br />
 <br /></p>
 <h1 id="about-us">About Us</h1>
+<hr />
 
 <div class="divider-10"></div>
 <p><br /></p>
 
+<article class="markdown-body entry-content" itemprop="text">
+
+
+
+
+
+<div class="card" style="border-radius: 1rem;color: white;">
+<div style="color: black;">
+<div class="container-IMT-left-profile">
+  <a href="https://uk.linkedin.com/in/jesus-requena-carrion" target="_blank">
+    <div class="imgb">
+      <img src="./assets/imgs/JesusRC_c.jpg" width="250" />
+    </div>
+    <p class="name-title">Dr Jesús Requena Carrión</p>
+    </a>
+    <p><b>Reader in Data Science and Engineering and Executive Vice-Dean</b><br />School of Electronic Engineering and Computer Science, Queen Mary University of London, UK<br />
+    Email: <a href="mailto:j.requena@qmul.ac.uk">j.requena@qmul.ac.uk</a><br />
+    </p>
+</div>
+</div>
+</div>
+  
+<!-- <br>
+<hr>
+<br> -->
+<br />
+<div class="card" style="border-radius: 1rem; color: white;">
+<div style="color: black;">
+<div class="container-IMT-left-profile">
+  <a href="http://nikeshbajaj.in" target="_blank">
+    <div class="imgb">
+      <img src="./assets/imgs/NikB2_c.jpg" width="250" />
+    </div>
+    <p class="name-title">Dr Nikesh Bajaj</p>
+    </a>
+    <p><b>Lecturer in Data Science</b><br />School of Physical and Chemical Sciences, Queen Mary University of London, UK<br />
+    Email: <a href="mailto:nikesh.bajaj@qmul.ac.uk">nikesh.bajaj@qmul.ac.uk</a><br />
+    </p>
+    </div>
+</div>
+</div>
+
+<br />
+<br />
+
+<h4> Teaching Fellows and Students supporting to MLEnd Datasets are: </h4>
+<hr />
+
+<!-- <table style="background-color:white; background-color: transparent;">
+<tbody>
+<tr>
+<td align=center>
+<div class="card" style="width:20rem;border-radius: 1rem; color: white;">
+<a href="http://nikeshbajaj.in" target="_blank">
+<div class="imgb">
+      <img src="./assets/imgs/Ammar_c.jpg" width="250">
+    </div>
+<p>Ammar Yasir Naich</p>
+</a>
+</div>
+</td>
+<td align=center>
+<div class="card" style="width:20rem;border-radius: 1rem; color: white;">
+<a href="http://nikeshbajaj.in" target="_blank">
+<div class="imgb">
+      <img src="./assets/imgs/Jiayu_c.png" width="250">
+    </div>
+<p>Ammar Yasir Naich</p>
+</a>
+</div>
+</td>
+<td align=center>
+<div class="card" style="width:20rem;border-radius: 1rem; color: white;">
+<a href="http://nikeshbajaj.in" target="_blank">
+<div class="imgb">
+      <img src="./assets/imgs/Jiayu_c.png" width="250">
+    </div>
+<p>Ammar Yasir Naich</p>
+</a>
+</div>
+</td>
+<td align=center>..</td>
+</tr>
+</tbody>
+</table> -->
+
+
+
+
+
+<!-- <center>
+<div class="card" style="width:20rem;border-radius: 1rem; color: white;">
+<a href="http://nikeshbajaj.in" target="_blank">
+<div class="imgb">
+      <img src="./assets/imgs/Ammar_c.jpg" width="250">
+    </div>
+<p>Ammar Yasir Naich</p>
+</a>
+</div>
+
+
+<div class="card" style="width:20rem;border-radius: 1rem; color: white;">
+<a href="http://nikeshbajaj.in" target="_blank">
+<div class="imgb">
+      <img src="./assets/imgs/Jiayu_c.png" width="250">
+    </div>
+<p>Ammar Yasir Naich</p>
+</a>
+</div>
+</center> -->
+
+
+<div class="card-deck mb-3 text-center">
+    <div class="card mb-4" style="color:white;">
+        <a href="https://uk.linkedin.com/in/ammaryasirnaich" onclick="trackOutboundLink(this);"><span class="link-spanner-main"></span></a>
+        <div class="card-body">
+        <center>
+        <img src="./assets/imgs/Ammar_c.jpg" width="200" />
+        <font color="black"><b>Ammar Yasir Naich</b></font>
+        </center>
+        </div>
+        </div>
+    <div class="card mb-4" style="color:white;">
+        <a href="https://uk.linkedin.com/in/jiayu-men-5377ab15b" onclick="trackOutboundLink(this);"><span class="link-spanner-main"></span></a>
+        <div class="card-body">
+        <center>
+        <img src="./assets/imgs/Jiayu_c.png" width="200" />
+        <font color="black"><b>Yiayu Men</b></font>
+        </center>
+        </div>
+        </div>
+    <div class="w-100 d-none d-sm-block d-md-none"></div>
+    <div class="card mb-4" style="color:white;">
+        <a href="https://jinhualiang.github.io/" onclick="trackOutboundLink(this);"><span class="link-spanner-main"></span></a>
+        <div class="card-body">
+        <center>
+        <img src="./assets/imgs/Jinhua_c.jpg" width="200" />
+        <font color="black"><b>Jinhua Liang</b></font>
+        </center>
+        </div>
+        </div>
+</div>
+
+<br />
+<br />
+<br />
+</article>
+
+<h1 id="link-to-other-projects">Link to other projects</h1>
+<hr />
+
+<article class="markdown-body entry-content" itemprop="text">
+
+<h3>&#x2022; <a href="https://pmlbook.github.io/" target="_blank">Principles of Machine Learning -  A deployment-first perspective </a> (Book)</h3>
+<h3>&#x2022; <a href="https://PhyAAt.github.io/" target="_blank">PhyAAt: Physiology of Auditory Attention</a></h3>
+<h3>&#x2022; <a href="https://SpKit.github.io/" target="_blank">SpKit: Signal Processing Toolkit</a></h3>
+<!-- <h3>. PyLFSR- Physiology of Auditory Attention</h3> -->
+
+
+
+<!-- <div class="card-deck mb-3 text-center">
+    <div class="card mb-4" style="color:white;">
+        <a href="https://PhyAAt.github.io" onclick="trackOutboundLink(this);"><span class="link-spanner-main"></span></a>
+        <div class="card-body">
+        <center>
+        <img src="https://github.com/PhyAAt/PhyAAt.github.io/blob/master/assets/logos/phyaat_logo_name.png?raw=true" width="200">
+        <font color='black'><b></b></font>
+        </center>
+        </div>
+        </div>
+    <div class="card mb-4" style="color:white;">
+        <a href="https://SpKit.github.io" onclick="trackOutboundLink(this);"><span class="link-spanner-main"></span></a>
+        <div class="card-body">
+        <center>
+        <br>
+        <br>
+        <img src="https://github.com/spkit/spkit.github.io/blob/master/assets/logo/logo.png?raw=true" width="200">
+        <font color='black'><b></b></font>
+        </center>
+        </div>
+        </div>
+    <div class="w-100 d-none d-sm-block d-md-none"></div>
+    <div class="card mb-4" style="color:white;">
+        <a href="https://PMLBook.github.io" onclick="trackOutboundLink(this);"><span class="link-spanner-main"></span></a>
+        <div class="card-body">
+        <center>
+        <img src="https://raw.githubusercontent.com/PMLBook/.github/main/book_cover_3d.png" width="200">
+        <font color='black'><b></b></font>
+        </center>
+        </div>
+        </div>
+    <div class="card mb-4" style="color:white;">
+        <a href="https://PyLFSR.github.io" onclick="trackOutboundLink(this);"><span class="link-spanner-main"></span></a>
+        <div class="card-body">
+        <center>
+        <br>
+        <br>
+        <img src="https://github.com/Nikeshbajaj/Linear_Feedback_Shift_Register/blob/master/images/pylfsr_logo.png?raw=true" width="200">
+        <font color='black'><b></b></font>
+        </center>
+        </div>
+        </div>
+</div> -->
+
+
+
+
+</article>
+
+<!-- <center>
+<table style="background-color:white; background-color: transparent;">
+<tbody>
+<tr>
+<td align=center>
+<div class="card" style="width:20rem;border-radius: 1rem; color: white;">
+<a href="https://uk.linkedin.com/in/ammaryasirnaich" target="_blank">
+<div class="imgb">
+      <img src="./assets/imgs/Ammar_c.jpg" width="250">
+    </div>
+<p>Ammar Yasir Naich</p>
+</a>
+</div>
+</td>
+<td align=center>
+<div class="card" style="width:20rem;border-radius: 1rem; color: white;">
+<a href="https://uk.linkedin.com/in/jiayu-men-5377ab15b" target="_blank">
+<div class="imgb">
+      <img src="./assets/imgs/Jiayu_c.png" width="250">
+    </div>
+<p>Jiayu Men</p>
+</a>
+</div>
+</td>
+<td align=center>
+<div class="card" style="width:20rem;border-radius: 1rem; color: white;">
+<a href="https://jinhualiang.github.io/" target="_blank">
+<div class="imgb">
+      <img src="./assets/imgs/Jinhua_c.jpg" width="250">
+    </div>
+<p>Jinhua Liang</p>
+</a>
+</div>
+</td>
+<td align=center>..</td>
+</tr>
+</tbody>
+</table>
+</center> -->
+
+<!-- 
 <div class="section" id="projects-list">
 <div class="container">
 <h3 style="font-weight:600; font-family: sans-serif;"> TODO <div style="float:right"><span></span></div>
-</h3> <br style="line-height:200%;" /> ...
-<br style="line-height:200%;" /><br style="line-height:200%;" />
+</h3> <br style="line-height:200%;"> ...
+<br style="line-height:200%;"><br style="line-height:200%;"> -->
 
+<!-- </div>
+</div> -->
 
-</div>
-</div>
-
-    </article>
+    <!-- </article> -->
     </div>
   </div>
 </div>

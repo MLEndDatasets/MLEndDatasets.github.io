@@ -11,17 +11,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="keywords" content="machine learning, datasets, MLEnd, data science, PML">
     <!-- <title>Teaching</title> -->
+    <!-- CSS -->
     <link href="https://MLEndDatasets.github.io/" rel="canonical">
     <link href="/assets/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/style.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/style_nb.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="/assets/style2.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="/assets/fonts/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/katex.min.css" rel="stylesheet">
+    <link href="/assets/article.min.css" rel="stylesheet">
+    <!-- JS -->
     <script src="/assets/jquery.min.js"></script>
     <script src="/assets/bootstrap.min.js"></script>
     <script defer="" src="/assets/underscore-min.js" type="text/javascript"></script>
     <script async="" src="/assets/js"></script>
     <script src="/assets/ga.min.js"></script>
     <script defer="" src="/assets/article.min.js"></script>
-    <!-- <script defer="" src="/assets/lang.min.js"></script> -->
+    <script defer="" src="/assets/lang.min.js"></script>
+    <script defer="" src="/assets/katex.min.js"></script>
+    <script crossorigin="anonymous" defer="" src="/assets/auto-render.min.js"></script>
+    <script defer="" src="/assets/buttons.js"></script>
+
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
@@ -88,7 +99,7 @@
         class="navbar-brand" href="/" onclick="trackOutboundLink(this);"> <img alt="NikB" src="/assets/imgs/home.svg" style="padding: 15px 15px; width: 80px; margin-left: 15px; margin-right: 5px;"> </a>
       <p class="navbar-text">
         <a href="/" onclick="trackOutboundLink(this);"><font size="6" color="#FFFFFF">MLEnd Datasets</font></a>
-        <!-- <h2  style="color:rgb(245, 241, 240);"> MLEnd Projects </h2> -->
+        <!-- <p style="font-size:1.8em;">MLEnd Datasets</p> -->
       </p>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -100,8 +111,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-center">
         <li><a href="/gallery/" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">Gallery</font> </a></li>
-        <li><a href="https://github.com/MLEndDatasets" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">Github</font> </a></li>
-        <li><a href="https://www.kaggle.com/jesusrequena/datasets" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">Kaggle</font> </a></li>
+        <li><a href="https://github.com/MLEndDatasets" onclick="trackOutboundLink(this);" target="_blank"><br><font size="5" color="#FFFFFF">Github</font> </a></li>
+        <li><a href="https://www.kaggle.com/jesusrequena/datasets" onclick="trackOutboundLink(this);" target="_blank"><br><font size="5" color="#FFFFFF">Kaggle</font> </a></li>
         <li><a href="/aboutus" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">About Us</font> </a></li>
       </ul>
       <div class="collapse navbar-collapse" data-target="None" id="HiddenNavbar">
@@ -125,9 +136,9 @@
 <div class="bodywrapper">
   <div class="body" role="main">
     <div class="container">
-      <article class="markdown-body entry-content" itemprop=text>
-        <br>
-        <br>
+      <!-- <article class="markdown-body entry-content" itemprop=text> -->
+        <!-- <br> -->
+        <!-- <br> -->
       <html lang="en">
 <div class="divider-10"></div>
   <!-- <div class="container"> <a href="https://nikeshbajaj.github.io/teaching" onclick="trackOutboundLink(this);" style="color: #0366d6;"><b>Teaching</b></a></div> -->
@@ -142,13 +153,11 @@
     <!-- <div class="w-100 d-none d-sm-block d-md-none"></div> -->
     <div class="textb">
       <h3><b>Welcome to MLEnd Datasets!</b></h4>
-      <p>
-      The MLEnd Datasets is a collection of datasets acquired during the modules <i>Principles of Machine Learning</i> and <i>Introduction to Data Science Programming</i> led by the Data Science and AI Teaching Group at Queen Mary Univeristy of London.
-      </p>
-      <p>
-      Following collaborative crowdsourcing approaches, students participate in the processes of data collection and curation. Then, they formulate and solve problems using the dataset that they have co-created. 
-      This unique learning experience builds upon a deployment-first perspective of machine learning and constructivism and allows our students to gain first-hand a deeper understanding of the significance of data collection and curation.
-      </p>
+        <p >The MLEnd Datasets is a collection of datasets acquired during the modules <i>Principles of Machine Learning</i> and <i>Introduction to Data Science Programming</i> 
+          led by the Data Science and AI Teaching Group at Queen Mary Univeristy of London.
+          Following collaborative crowdsourcing approaches, students participate in the processes of data collection and curation. Then, they formulate and solve problems using the dataset that they have co-created. 
+          This unique learning experience builds upon a deployment-first perspective of machine learning and constructivism and allows our students to gain first-hand a deeper understanding of the significance of data collection and curation.
+        </p>
     </div>
   </div>
 
@@ -162,8 +171,9 @@
   <div class="section" id="projects-list">
     <div class="container">
       <!-- <a href="https://link" onclick="trackOutboundLink(this);">text</a> -->
-      <h3 style="font-weight:600; font-family: sans-serif;"> MLEnd Datasets <div style="float:right"><span></span></div>
-      </h3> <br style="line-height:200%;"> Following datasets are in public domain.
+      <h3 style="font-weight:600; font-family: sans-serif;"> Explore the MLEnd Datasets <div style="float:right"><span></span></div>
+      </h3> <br style="line-height:200%;"> 
+      <!-- Following datasets are in public domain. -->
       <br style="line-height:200%;"><br style="line-height:200%;">
       <!-- <h4><b>Courses</b></h4><br style="line-height:100%;"> -->
       <!-- - MLEnd Spoken Numerals: "MLEndDatasets.github.io/SpokenNumerals"
@@ -183,14 +193,13 @@
             <br>
             <br>
           </div>
-
-
           <div class="card-body"> <img src="./assets/imgs/Numers_cover.jpg">
-            <b>Speech of numerals with different intonations</b>
+            <b>Spoken numerals with different intonations</b>
             <ul class="list-unstyled mt-3 mb-4">
               <!-- <li>• Spoken Numerals</li> -->
-              <li>• 32K audio files, from 154 Speakers</li>
-              <li>• Four different intonations: "neutral", "bored", "excited" and "question"</li>
+              <li>• 32K audio files from 154 speakers</li>
+              <li>• Four different intonations</li>
+              <li>• Demographic data</li>
             </ul>
           </div>
           <div class="card-footer"> <small class="text-muted">
@@ -215,11 +224,11 @@
           <br>
         </div>
         <div class="card-body"> <img src="./assets/imgs/HW_cover.png">
-          <b>Humming and whistling of songs</b>
+          <b>Humming and whistling to songs</b>
           <ul class="list-unstyled mt-3 mb-4">
-            <li>• 6K audio files, 8 Songs</li>
-            <li>• 2 Interpretations: Hums and Whistles</li>
-            <li>• 235 Interepreters </li>
+            <li>• 6K audio files, 8 songs</li>
+            <li>• 2 interpretations: Hums and Whistles</li>
+            <li>• 235 interepreters </li>
           </ul>
         </div>
         <div class="card-footer"> <small class="text-muted">
@@ -243,11 +252,11 @@
         <br>
       </div>
       <div class="card-body"> <img src="./assets/imgs/London_cover.jpg">
-        <b>Acoustic scenes for London</b>
+        <b>London acoustic scenes</b>
         <ul class="list-unstyled mt-3 mb-4">
           <li>• 2.5K audio files</li>
-          <li>• 6 Areas of London, with 6 different spots</li>
-          <li>• Indoor and outdoor spots</li>
+          <li>• 6 areas of London, 6 spots per area</li>
+          <li>• Indoor and outdoor scenes</li>
         </ul>
       </div>
       <div class="card-footer"> <small class="text-muted">
@@ -275,7 +284,8 @@
           <div class="card-body"> <img src="./assets/imgs/happiness_cover.png">
             <b>Happiness with demographics</b>
             <ul class="list-unstyled mt-3 mb-4">
-              <li>• Tabular data with 310 items</li>
+              <li>• Tabular data</li>
+              <li>• 310 items</li>
               <li>• 9 attributes</li>
               <li></li>
             </ul>
@@ -328,7 +338,7 @@
     </div>
   </div>
 
-    </article>
+    <!-- </article> -->
     </div>
   </div>
 </div>

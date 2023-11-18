@@ -11,17 +11,28 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=0">
     <meta name="keywords" content="machine learning, datasets, MLEnd, data science, PML">
     <!-- <title>Teaching</title> -->
+    <!-- CSS -->
     <link href="https://MLEndDatasets.github.io/" rel="canonical">
     <link href="/assets/bootstrap.min.css" rel="stylesheet">
     <link href="/assets/style.min.css" rel="stylesheet" type="text/css">
-    <link href="/assets/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/style_nb.min.css" rel="stylesheet" type="text/css">
+    <!-- <link href="/assets/style2.min.css" rel="stylesheet" type="text/css"> -->
+    <link href="/assets/fonts/font-awesome.min.css" rel="stylesheet">
+    <link href="/assets/katex.min.css" rel="stylesheet">
+    <link href="/assets/article.min.css" rel="stylesheet">
+    <!-- JS -->
     <script src="/assets/jquery.min.js"></script>
     <script src="/assets/bootstrap.min.js"></script>
     <script defer="" src="/assets/underscore-min.js" type="text/javascript"></script>
     <script async="" src="/assets/js"></script>
     <script src="/assets/ga.min.js"></script>
     <script defer="" src="/assets/article.min.js"></script>
-    <!-- <script defer="" src="/assets/lang.min.js"></script> -->
+    <script defer="" src="/assets/lang.min.js"></script>
+    <script defer="" src="/assets/katex.min.js"></script>
+    <script crossorigin="anonymous" defer="" src="/assets/auto-render.min.js"></script>
+    <script defer="" src="/assets/buttons.js"></script>
+
+
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/styles/default.min.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/highlight.js/10.0.3/highlight.min.js"></script>
@@ -88,7 +99,7 @@
         class="navbar-brand" href="/" onclick="trackOutboundLink(this);"> <img alt="NikB" src="/assets/imgs/home.svg" style="padding: 15px 15px; width: 80px; margin-left: 15px; margin-right: 5px;"> </a>
       <p class="navbar-text">
         <a href="/" onclick="trackOutboundLink(this);"><font size="6" color="#FFFFFF">MLEnd Datasets</font></a>
-        <!-- <h2  style="color:rgb(245, 241, 240);"> MLEnd Projects </h2> -->
+        <!-- <p style="font-size:1.8em;">MLEnd Datasets</p> -->
       </p>
     </div>
     <div class="collapse navbar-collapse" id="myNavbar">
@@ -100,8 +111,8 @@
       </ul>
       <ul class="nav navbar-nav navbar-center">
         <li><a href="/gallery/" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">Gallery</font> </a></li>
-        <li><a href="https://github.com/MLEndDatasets" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">Github</font> </a></li>
-        <li><a href="https://www.kaggle.com/jesusrequena/datasets" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">Kaggle</font> </a></li>
+        <li><a href="https://github.com/MLEndDatasets" onclick="trackOutboundLink(this);" target="_blank"><br><font size="5" color="#FFFFFF">Github</font> </a></li>
+        <li><a href="https://www.kaggle.com/jesusrequena/datasets" onclick="trackOutboundLink(this);" target="_blank"><br><font size="5" color="#FFFFFF">Kaggle</font> </a></li>
         <li><a href="/aboutus" onclick="trackOutboundLink(this);"><br><font size="5" color="#FFFFFF">About Us</font> </a></li>
       </ul>
       <div class="collapse navbar-collapse" data-target="None" id="HiddenNavbar">
@@ -125,10 +136,13 @@
 <div class="bodywrapper">
   <div class="body" role="main">
     <div class="container">
-      <article class="markdown-body entry-content" itemprop=text>
-        <br>
-        <br>
-      <h1 id="gallery">Gallery</h1>
+      <!-- <article class="markdown-body entry-content" itemprop=text> -->
+        <!-- <br> -->
+        <!-- <br> -->
+      <p><br />
+<br /></p>
+
+<h1 id="gallery">Gallery</h1>
 
 <div class="divider-10"></div>
 <p><br /></p>
@@ -140,28 +154,78 @@
 <br style="line-height:200%;" />
 <br style="line-height:200%;" />
   <!-- "/assets/bootstrap.min.css" -->
-
-<div class="card" style="width: 18rem;">
+<table>
+<tbody>
+<td>
+<div class="card" style="width: 18rem;height:25rem;">
 <center>
-  <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_blank"><img src="/assets/imgs/yummy_icon.png" alt="Yummy" style="width:80%" /></a>
+  <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_blank">
+  <img src="/assets/imgs/yummy_icon.png" alt="Yummy" style="width:80%" /></a>
   </center>
   <div class="card-body">
     <h4 class="card-title" style="text-align: center;"><b>A Starter-kit</b></h4>
     <h4 class="card-title" style="text-align: center;"><b>Yummy Dataset</b></h4>
     <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_blank"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab\" /></a>
+    <!-- <br> -->
   </div>
 </div>
+</td>
+<td style="width: 10%;"><div class="w-100 d-none d-sm-block d-md-none"></div></td>
+<td>
+<!-- <div class="w-100 d-none d-sm-block d-md-none"></div> -->
+<div class="card" style="width: 18rem;height:25rem;">
+<center>
+  <a href="https://www.kaggle.com/code/nikeshbajaj/mlend-snd-getting-started" target="_blank">
+  <img src="/assets/imgs/square_r_1.png" alt="Spoken-numerals" style="width:70%;opacity: 0.5;" /></a>
+  </center>
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center;"><b>A Starter-kit</b></h5>
+    <h5 class="card-title" style="text-align: center;"><b>Spoken-Numerals</b></h5>
+    <a href="https://www.kaggle.com/code/nikeshbajaj/mlend-snd-getting-started" target="_blank"> <img src="/assets/imgs/kaggle-badge.svg" alt="Open In Kaggle\" /></a>
+    
+  </div>
+</div>
+</td>
+</tbody>
+</table>
+
+<!-- <div class="card-deck-gallery mb-4 text-center">
+<div class="card" style="width: 18rem;">
+<center>
+  <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_blank"><img src= "/assets/imgs/yummy_icon.png" alt="Yummy" style="width:80%"></a>
+  </center>
+  <div class="card-body">
+    <h4 class="card-title" style="text-align: center;"><b>A Starter-kit</b></h4>
+    <h4 class="card-title" style="text-align: center;"><b>Yummy Dataset</b></h4>
+    <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_blank"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab\"/></a>
+  </div>
+</div>
+<div class="w-100 d-none d-sm-block d-md-none"></div>
+<div class="card" style="width: 18rem;">
+<center>
+  <br/>
+  <a href="https://www.kaggle.com/code/nikeshbajaj/mlend-snd-getting-started" target="_blank"><img src= "/assets/imgs/square_r_1.png" alt="Spoken-numerals" style="width:80%;opacity: 0.5;"></a>
+  </center>
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center;"><b>A Starter-kit</b></h5>
+    <h5 class="card-title" style="text-align: center;"><b>Spoken-Numerals</b></h5>
+    <a href="https://www.kaggle.com/code/nikeshbajaj/mlend-snd-getting-started" target="_blank"> <img src="/assets/imgs/kaggle-badge.svg" alt="Open In Kaggle\"/></a>
+  </div>
+</div>
+</div> -->
+
+
 <br />
-<br style="line-height:200%;" /> ...
+<!-- <br style="line-height:200%;"> ... -->
 <br style="line-height:200%;" />
-<h3 style="font-weight:600; font-family: sans-serif;"> TODO <div style="float:right"><span></span></div></h3>
-<br style="line-height:200%;" /> ...
+<!-- <h3 style="font-weight:600; font-family: sans-serif;"> TODO <div style="float:right"><span></span></div></h3> -->
+<!-- <br style="line-height:200%;"> ... -->
 <br style="line-height:200%;" />
 <br style="line-height:200%;" />
 </div>
 </div>
 
-    </article>
+    <!-- </article> -->
     </div>
   </div>
 </div>
