@@ -4543,7 +4543,8 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
   overflow-y: auto
 }
 
-@media (min-width:768px) {
+/* NikB changed from 768 to 902px */
+@media (min-width:902px) {
   .navbar-collapse {
     width: auto;
     border-top: 0;
@@ -4675,7 +4676,8 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
   margin-top: 4px
 }
 
-@media (min-width:768px) {
+/* NikB changed from 768 to 902px */
+@media (min-width:902px) {
   .navbar-toggle {
     display: none
   }
@@ -4691,7 +4693,8 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
   line-height: 20px
 }
 
-@media (max-width:767px) {
+/* NikB changed from 768 to 902px */
+@media (max-width:902px) {
   .navbar-nav .open .dropdown-menu {
     position: static;
     float: none;
@@ -5036,8 +5039,8 @@ select[multiple].input-group-sm>.form-control, select[multiple].input-group-sm>.
   color: #fff;
   background-color: #080808
 }
-
-@media (max-width:767px) {
+/* NikB 902px */
+@media (max-width:902px) {
   .navbar-inverse .navbar-nav .open .dropdown-menu>.dropdown-header {
     border-color: #080808
   }
