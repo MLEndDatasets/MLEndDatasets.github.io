@@ -1,3 +1,22 @@
+
+.single-profile-card{
+    /* display: flex; */
+    align-items: right;
+    justify-content: right;
+    vertical-align: top;
+}
+
+.profile-info{
+  width:50%;
+  align-items: right;
+  justify-content: right;
+  /* float: right; */
+  display:inline-block;
+  margin-top: 10%;
+}
+
+
+
 .container-IMT-left {
   /* display: flex; */
   align-items: left;
@@ -27,10 +46,84 @@
   max-width: 100%;
   max-height:100%;
   /* padding-top: 5%; */
-  padding-right:2%;
+  padding-right:10%;
+  /* padding-left:10%; */
   float: left;
   display:block;
+  margin-right: 10%;
+  margin-left: 10%;
+  margin-bottom: 5%;
+  
 }
+
+.container-IMT-left-profile:hover{
+  opacity: 0.8;
+  background-color: rgba(239, 235, 235, 0.366);
+}
+
+.profile-name{
+  max-width: 100%;
+  display:block;
+}
+.profile-box{
+  float: left;
+  display:block;
+  max-width: 100%;
+}
+
+@media(min-width:583px) {
+  .profile-box {
+    padding-top: -15%;
+    /* float: right; */
+    /* float: flex; */
+    display:inline-block;
+    /* display:block; */
+    /* max-width: 50%; */
+  }
+  .imgb {
+    /* max-width: 50%; */
+    display:inline-block;
+    margin-right: 2%;
+    margin-left: 1%;
+    padding-right:0%;
+  }
+}
+
+@media(min-width:455px) {
+  /* .imgb {
+    margin-right: calc(50% - 30px);
+  } */
+  /* .profile-name{ */
+    /* max-width: 100%; */
+    /* display:block;
+    -ms-flex-flow: row wrap;
+    flex-flow: row wrap;
+    margin-right: 0;
+    margin-left: 0 */
+    /* white-space: nowrap; */
+    /* max-width: calc(50% - 30px) */
+    /* vertical-align: top; */
+    /* text-align: left; */
+  /* } */
+}
+
+@media(min-width:455px) and (max-width:596px){
+  .imgb {
+    margin-right: calc(50% - 20px);
+    padding-right: 10px;
+  }
+
+
+
+
+
+
+/* @media(min-width:455px) {
+  .imgb {
+    padding-top: 3%;
+  }
+} */
+
   
 .textb {
   font-size: 2rem;
@@ -61,6 +154,15 @@
     padding-top: 3%;
   }
 }
+
+
+/* @media(min-width:455px) {
+  .imgb {
+    padding-top: 3%;
+    margin-right: 1%;
+    margin-left: 1%;
+  }
+} */
 
 /* @media(min-width:324px) {
   .name-title {
@@ -111,13 +213,13 @@
   }
 
   .imgb img {
-    margin-top: 0%;
+    /* margin-top: 0%; */
     /* width: 50%; */
-    position: relative;
+    /* position: relative; */
     /* max-width: 200px */
-    margin-right: 10%;
+    /* margin-right: 10%; */
     /* display:block; */
-    float:none;
+    /* float:none; */
   }
 }
 
