@@ -71,10 +71,24 @@
   
 }
 
-.container-IMT-left-profile:hover{
+.imgb:hover{
   opacity: 0.8;
   background-color: rgba(239, 235, 235, 0.366);
 }
+
+
+/* .container-IMT-left-profile:hover{ */
+  /* opacity: 0.5; */
+  /* background-color: rgba(239, 235, 235, 0.366); */
+  /* box-shadow: 1px 0px 2px #63626290; */
+/* } */
+
+/* .card:hover{ */
+  /* opacity: 0.8; */
+  /* background-color: rgba(239, 235, 235, 0.366);  */
+  /* box-shadow: -1px 0px 1px #63626290; */
+/* } */
+
 
 .profile-name{
   max-width: 100%;
