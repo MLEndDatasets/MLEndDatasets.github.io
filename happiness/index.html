@@ -155,9 +155,9 @@
 <br /></p>
 
 <center>
-<img src="/assets/imgs/square_r_4.png" width="100" align="left" />
+<img src="/assets/imgs/square_y_4.png" width="100" align="left" />
 <h1> MLEnd Happiness </h1>
-<h3> Happiness with demographic</h3>
+<h3> A dataset of perceived happiness</h3>
 
 </center>
 <div class="divider-10"></div>
@@ -172,10 +172,57 @@
 <div class="container">
 <h3 style="font-weight:600; font-family: sans-serif;"> About Dataset <div style="float:right"><span></span></div>
 </h3> <br style="line-height:200%;" />
+
+<font size="4">
+Philosophers have long debated whether happiness stands as life's ultimate goal. Despite our ongoing pursuit, the genuine measure of happiness remains elusive. Yet, our quest for understanding has led to the exploration of novel approaches that hold promise in gauging an individual's happiness.
+
+<br />
+
+<br />
+
+Traditionally, happiness has been assessed primarily through self-reported measures. However, a novel perspective emerges within the dataset that we present here. Rather than directly inquiring about an individual's self-perceived happiness, we pivot the assessment to the perspectives of their close associates. This paradigm shift prompts participants to gather data from those intimately connected to them, such as friends and family. While the MLEnd Happiness Dataset may not definitively ascertain an individual's perceived happiness, it offers insight into how their immediate circle perceives their happiness. And by extend, we have a small window to the participant's perpective.
+
+<br />
+
+<br />
+
+The MLEnd Happiness Dataset comprises 310 samples, collected by over 80 participants. This collection offers a unique opportunity to explore potential connections between demographic factors and the perceived happiness of an individual. The dataset was curated by students at the Queen Mary Hainan School, presenting a valuable resource for investigating the  interplay between demographics and the perception of happiness.
+
+
+<!-- Philosophers, throughout history, have debated whether happiness is the ultimate goal of life. Though we are still far away from the true measure happiness, we have been constantly finding new ways that have potential to indicate the happiness of a person.  -->
+
+
+
+<!-- Conventionally, happiness is measured with self-reporting. In this dataset, we change a view of happiness a little. Instead of asking person to rate, how happy they are, we ask their close related person to rate person's happiness. To do this, participants for collect data from their close related people (friends and family). MLEnd happiness dataset not necessarly tell us, if person is really happy, but how their close one think about their happiness.  -->
+
+<br />
+
+<!-- The MLEnd Happiness Dataset is a collection of 310 samples, collected by more than 80 participants that allows us to find any relation of demographic and our perception of happiness of person. This dataset was created by students at the Queen Mary Hainan School.  -->
+
+<br />
+<br />
+
+Enjoy!
+
+</font>
+
+
 </div>
 </div>
 
-<h3 style="font-weight:600; font-family: sans-serif;"> Sample of data <div style="float:right"><span></span></div>
+<h3 style="font-weight:600; font-family: sans-serif;"> Sample of data <div style="float:right"><span></span></div></h3>
+<p><br /></p>
+
+<font size="4">
+The MLEnd Happiness Dataset consist of 9 attributes of individual and happiness-level (from 1-to-10) perceived by participant. The attributes are namely; Age (years), Height (cm), Weight (Kg), Education-level, Number of languages known, likeness of Vollyball and Tennis, Name of Favourite Movie.
+
+<br />
+
+<br />
+
+Here is a sample of data:
+
+</font>
 
 <article class="markdown-body entry-content" itemprop="text">
 <div style="font-size:70%;margin-left:-100px;">
@@ -263,30 +310,31 @@
 </article>
 
 <hr />
+
 <h3 style="font-weight:600; font-family: sans-serif;"> Download Data</h3>
- 
+
 <h4 style="font-weight:600; font-family: sans-serif;"> Install mlend (&gt;1.0.0.2)</h4>
 
-To download the Yummy dataset, first step is to install <a href="https://pypi.org/project/mlend" target="_blank"><code>mlend</code></a> library. Use pip to install library.
+<p>To download the Yummy dataset, first step is to install <a href="https://pypi.org/project/mlend" target="_blank"><code>mlend</code></a> library. Use pip to install library.
 <br />
-<br />
+<br /></p>
 
 <pre><code>pip install mlend</code></pre>
 
-<br />
-<br />
+<p><br />
+<br /></p>
 
 <h4 style="font-weight:600; font-family: sans-serif;"> Download dataset</h4>
 
-<br />
+<p><br /></p>
 
-To download happiness dataset make sure to updgrade <code>mlend</code> library to <code>version&gt;1.0.0.2</code>
+<p>To download happiness dataset make sure to updgrade <code>mlend</code> library to <code>version&gt;1.0.0.2</code></p>
 
-<br />
+<p><br /></p>
 
 <pre><code>pip install mlend --upgrade</code></pre>
 
-#### To download dataset, use following piece of code
+<h4 id="to-download-dataset-use-following-piece-of-code">To download dataset, use following piece of code</h4>
 
 <pre><code class="python">import mlend
 from mlend import download_happiness, download_load_happiness, happiness_load
@@ -295,17 +343,17 @@ datadir = download_happiness(save_to = '../MLEnd')
 
 </code></pre>
 
-It will download a CSV file in folder <code>../MLEnd/happiness</code> directory
+<p>It will download a CSV file in folder <code>../MLEnd/happiness</code> directory</p>
 
-<br />
+<p><br /></p>
 
-<br />
+<p><br /></p>
 
 <h4 style="font-weight:600; font-family: sans-serif;"> Read dataset</h4>
 
-After downloading, to load dataset use following piece of code
+<p>After downloading, to load dataset use following piece of code</p>
 
-<br />
+<p><br /></p>
 
 <pre><code class="python">import mlend
 from mlend import download_happiness, download_load_happiness, happiness_load
@@ -316,13 +364,13 @@ D = happiness_load(datadir)
 
 </code></pre>
 
-<br />
+<p><br /></p>
 <h4 style="font-weight:600; font-family: sans-serif;"> Download and read dataset</h4>
 
-<br />
-Alternately, use following piece of code to download and load data with one line
+<p><br />
+Alternately, use following piece of code to download and load data with one line</p>
 
-<br /> 
+<p><br /></p>
 <pre><code class="python">import mlend
 from mlend import download_load_happiness
 
@@ -331,21 +379,16 @@ D = download_load_happiness()
 D.head()
 </code></pre>
 
-
-
-<br />
+<p><br /></p>
 <hr />
 
-### MLEnd Documentation 
+<h3 id="mlend-documentation">MLEnd Documentation</h3>
 
-For mlend documentation use <code>help(fun)</code> in python terminal or Jupyter-notebook. Alternately, check out
+<p>For mlend documentation use <code>help(fun)</code> in python terminal or Jupyter-notebook. Alternately, check out</p>
 <h4><a href="https://mlend.readthedocs.io/" target="_blank">MLEnd Documentation</a></h4>
 
-<br />
+<p><br /></p>
 
-
-
-</h3>
 
     <!-- </article> -->
     </div>
