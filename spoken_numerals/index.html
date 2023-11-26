@@ -166,26 +166,28 @@
 
 <div class="section" id="projects-list">
 <div class="container">
-<h3 style="font-weight:600; font-family: sans-serif;"> About the dataset <div style="float:right"><span></span></div></h3>
+<h3 style="font-weight:600; font-family: sans-serif;"> About Dataset <div style="float:right"><span></span></div></h3>
 <br style="line-height:200%;" />
 
 <font size="4">Speech recognition has improved dramatically over the past years due to advances in machine learning and the availability of speech data. Speech recognition is nowadays powering a multitude of applications, from home virtual assistants to call centers, and it is expected to be integrated in many more systems, some of which might be critical for inclusivity.
 </font>
 
-<br />
+
+
 <br />
 
 <font size="4">
-Machine learning solutions are however constrained by the quality of the data they are trained on. If our data does not represent our target population well, we can only aspire for our solution to work well on the sub-population that our data represents. In other words, solutions from non-representative data are inevitably biased towards a sub-population. In the context of speech recognition, machine learning solutions trained on non-representative datasets will not perform well on any sub-population that is not represented well, and this can have a detrimental impact on inclusivity.
+Machine learning solutions are however constrained by the quality of the data they are trained on. If our data does not represent our target population well, we can only aspire for our solution to work well on the sub-population that our data represents. In other words, solutions from non-representative data are inevitably biased towards a sub-population. In the context of speech recognition, machine learning solutions trained on non-representative datasets will not perform well on any sub-population that is not represented well, which can have a detrimental impact on inclusivity.
 </font>
 
 <br />
 <br />
 
 <font size="4">
-The MLEnd Spoken Numerals dataset is a collection of more than <b>32k audio recordings</b> produced by <b>154 speakers</b>. Each audio recording corresponds to one <b>English numeral</b> (from "zero" to "billion") that is read using different <b>intonations</b> ("neutral", "bored", "excited" and "question"). Our participants have a diverse background: <b>31 nationalities</b> and <b>42 mother languages</b> are represented in the MLEnd Spoken Numerals dataset. This dataset comes with additional demographic information about our participants.
+The MLEnd Spoken Numerals dataset is a collection of more than <b>32k audio recordings</b> produced by <b>154 speakers</b>. Each audio recording corresponds to one <b>English numeral (from "zero" to "billion")</b> that is read using different intonations <b>("neutral", "bored", "excited" and "question")</b>. Our participants have a diverse background: <b>31 nationalities</b> and <b>42 unique languages</b> are represented in the MLEnd Spoken Numerals dataset. This dataset comes with additional demographic information about our participants.
 </font><font size="4">
-The MLEnd datasets have been created by students at the School of Electronic Engineering and Computer Science, Queen Mary University of London. 
+The MLEnd datasets have been created by students at the School of Electronic Engineering and Computer Science, Queen Mary University of London. Other datasets include the MLEnd Hums and Whistles dataset, also available on Kaggle. Do not hesitate to reach out if you want to know more about how we did it.
+
 
 </font><font size="4">
 <br />
@@ -457,6 +459,16 @@ TrainSet, TestSet, MAPs = spoken_numerals_load(datadir_main = datadir,
   </div>
 </div>
 </div>
+
+<p><br /></p>
+<hr />
+
+<h3 id="mlend-documentation">MLEnd Documentation</h3>
+
+<p>For mlend documentation use <code>help(fun)</code> in python terminal or Jupyter-notebook. Alternately, check out</p>
+<h4><a href="https://mlend.readthedocs.io/" target="_blank">MLEnd Documentation</a></h4>
+
+<p><br /></p>
 
 <!-- <table>
 <tbody>

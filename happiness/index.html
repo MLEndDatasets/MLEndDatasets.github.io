@@ -157,27 +157,195 @@
 <center>
 <img src="/assets/imgs/square_r_4.png" width="100" align="left" />
 <h1> MLEnd Happiness </h1>
-<h3>...</h3>
+<h3> Happiness with demographic</h3>
 
 </center>
 <div class="divider-10"></div>
 <hr />
 
-<div class="alert alert-primary" role="alert">
+<!-- <div class="alert alert-primary" role=alert>
   <h3>Will be updated soon ...</h3>
-</div>
+</div> -->
 <p><img src="/assets/imgs/happiness_cover.png" width="30%" align="right" /></p>
 
 <div class="section" id="projects-list">
 <div class="container">
 <h3 style="font-weight:600; font-family: sans-serif;"> About Dataset <div style="float:right"><span></span></div>
 </h3> <br style="line-height:200%;" />
+</div>
+</div>
 
-<h4>Todo</h4>
+<h3 style="font-weight:600; font-family: sans-serif;"> Sample of data <div style="float:right"><span></span></div>
+
+<article class="markdown-body entry-content" itemprop="text">
+<div style="font-size:70%;margin-left:-100px;">
+<!-- <font size=2> -->
+<table border="1">
+  <thead>
+    <tr style="text-align: center;">
+      <th>Age</th>
+      <th>Height</th>
+      <th>Weight</th>
+      <th>EducationLevel</th>
+      <th>NumberOfLanguages</th>
+      <th>LikeVollyball</th>
+      <th>LikeTableTennis</th>
+      <th>FavouriteMovie</th>
+      <th>Province</th>
+      <th>HappinessLevel</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>48.0</td>
+      <td>162.0</td>
+      <td>61.0</td>
+      <td>Undergraduate Degree (UG)</td>
+      <td>3</td>
+      <td>False</td>
+      <td>True</td>
+      <td>The Lord of the Rings</td>
+      <td>Henan</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <td>48.0</td>
+      <td>172.0</td>
+      <td>65.0</td>
+      <td>Postgraduate/ Master's Degree (PG)</td>
+      <td>3</td>
+      <td>True</td>
+      <td>True</td>
+      <td>Wolf Warriors</td>
+      <td>Henan</td>
+      <td>10.0</td>
+    </tr>
+    <tr>
+      <td>19.0</td>
+      <td>169.0</td>
+      <td>61.0</td>
+      <td>Undergraduate Degree (UG)</td>
+      <td>2</td>
+      <td>True</td>
+      <td>False</td>
+      <td>Guardians of the Galaxy</td>
+      <td>Henan</td>
+      <td>9.0</td>
+    </tr>
+    <tr>
+      <td>18.0</td>
+      <td>176.0</td>
+      <td>95.0</td>
+      <td>Undergraduate Degree (UG)</td>
+      <td>2</td>
+      <td>True</td>
+      <td>True</td>
+      <td>Fast &amp; Furious</td>
+      <td>Liaoning</td>
+      <td>8.0</td>
+    </tr>
+    <tr>
+      <td>18.0</td>
+      <td>168.0</td>
+      <td>52.0</td>
+      <td>Undergraduate Degree (UG)</td>
+      <td>2</td>
+      <td>False</td>
+      <td>False</td>
+      <td>The Wandering Earth</td>
+      <td>Tianjin</td>
+      <td>8.0</td>
+    </tr>
+  </tbody>
+</table>
+<!-- </font> -->
+</div>
+</article>
+
+<hr />
+<h3 style="font-weight:600; font-family: sans-serif;"> Download Data</h3>
+ 
+<h4 style="font-weight:600; font-family: sans-serif;"> Install mlend (&gt;1.0.0.2)</h4>
+
+To download the Yummy dataset, first step is to install <a href="https://pypi.org/project/mlend" target="_blank"><code>mlend</code></a> library. Use pip to install library.
+<br />
+<br />
+
+<pre><code>pip install mlend</code></pre>
+
+<br />
+<br />
+
+<h4 style="font-weight:600; font-family: sans-serif;"> Download dataset</h4>
+
+<br />
+
+To download happiness dataset make sure to updgrade <code>mlend</code> library to <code>version&gt;1.0.0.2</code>
+
+<br />
+
+<pre><code>pip install mlend --upgrade</code></pre>
+
+#### To download dataset, use following piece of code
+
+<pre><code class="python">import mlend
+from mlend import download_happiness, download_load_happiness, happiness_load
+
+datadir = download_happiness(save_to = '../MLEnd')
+
+</code></pre>
+
+It will download a CSV file in folder <code>../MLEnd/happiness</code> directory
+
+<br />
+
+<br />
+
+<h4 style="font-weight:600; font-family: sans-serif;"> Read dataset</h4>
+
+After downloading, to load dataset use following piece of code
+
+<br />
+
+<pre><code class="python">import mlend
+from mlend import download_happiness, download_load_happiness, happiness_load
+
+datadir = download_happiness(save_to = '../MLEnd')
+
+D = happiness_load(datadir)
+
+</code></pre>
+
+<br />
+<h4 style="font-weight:600; font-family: sans-serif;"> Download and read dataset</h4>
+
+<br />
+Alternately, use following piece of code to download and load data with one line
+
+<br /> 
+<pre><code class="python">import mlend
+from mlend import download_load_happiness
+
+D = download_load_happiness()
+
+D.head()
+</code></pre>
 
 
 
-</div></div>
+<br />
+<hr />
+
+### MLEnd Documentation 
+
+For mlend documentation use <code>help(fun)</code> in python terminal or Jupyter-notebook. Alternately, check out
+<h4><a href="https://mlend.readthedocs.io/" target="_blank">MLEnd Documentation</a></h4>
+
+<br />
+
+
+
+</h3>
 
     <!-- </article> -->
     </div>

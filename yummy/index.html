@@ -232,6 +232,8 @@ Enjoy!
 <br>
 <br> 
 <br>  -->
+<hr />
+
 <h3 style="font-weight:600; font-family: sans-serif;"> Download Data: Small set</h3>
 
 <h4 style="font-weight:600; font-family: sans-serif;"> Install mlend</h4>
@@ -280,22 +282,142 @@ baseDir = download_yummy_small(save_to = '../MLEnd')
 
 <p><br /></p>
 
+<hr />
+
 <h3 style="font-weight:600; font-family: sans-serif;"> Download Data: Full</h3>
 
-<p>TBA
-<br />
-<br /></p>
+<p>To download full yummy dataset make sure to updgrade <code>mlend</code> library to <code>version&gt;1.0.0.2</code></p>
 
-<div class="card" style="width: 12rem;">
+<p><br /></p>
+
+<pre><code>pip install mlend --upgrade</code></pre>
+
+<h4 id="to-download-full-dataset-use-following-piece-of-code">To download full dataset, use following piece of code</h4>
+
+<pre><code class="python">import mlend
+from mlend import download_yummy, yummy_load
+
+subset = {}
+
+datadir = download_yummy(save_to = '../MLEnd', subset = subset,verbose=1,overwrite=False)
+
+</code></pre>
+
+<p>It will download all the images (3K+) in folder <code>../MLEnd/yummy/MLEndYD_images</code> directory</p>
+
+<p><br /></p>
+
+<h4 style="font-weight:600; font-family: sans-serif;"> Download partial data</h4>
+
+<p>Alternately, to download subset of data use following piece of code</p>
+
+<p><br /></p>
+
+<pre><code class="python">import mlend
+from mlend import download_yummy, yummy_load
+
+subset = {'Diet':['vegan'], 'Home_or_restaurant':['home']}
+
+datadir = download_yummy(save_to = '../MLEnd', 
+                                   subset = subset,verbose=1,overwrite=False)
+
+</code></pre>
+
+<p>It will download images of vegan dish cooked at home</p>
+
+<p><br /></p>
+
+<!-- <font color='red'>NOTE: if above code raise Error <code>HTTPError</code></font> -->
+
+<div class="alert alert-primary" role="alert">
+  <h5>NOTE: Above code might raise <code>HTTPError</code>, if any of the image file, part of subset selection is not found to download. All the files are still being uploaded on cloud. To avoid this error, use following code:</h5>
+</div>
+
+<pre><code class="python">
+datadir, FILE_ERROR = download_yummy(save_to = '../MLEnd', 
+                                   subset = subset,verbose=1,overwrite=False,debug_mode=True)
+</code></pre>
+
+<p>This will return the list of image files (<code>FILE_ERROR</code>) that are not found on cloud.</p>
+
+<p><br />
+<br /></p>
+<hr />
+
+<h3 style="font-weight:600; font-family: sans-serif;"> Load the Data with benchmark sets</h3>
+
+<p>After downloading partial or full dataset, mlend allows you to load the dataset with specified method of training and testing split. Note, mlend doesn’t load the image files in memory, instead it reads the path of files, for further reading and cleaning data as per requirement of the model. For more details, check <code>help(yummy_load)</code>.</p>
+
+<p><br /></p>
+<pre><code class="python">import mlend
+from mlend import download_yummy, yummy_load
+
+subset = {'Diet':['vegan'], 'Home_or_restaurant':['home']}
+
+datadir = download_yummy(save_to = '../MLEnd', 
+                                   subset = subset,verbose=1,overwrite=False)
+
+TrainSet, TestSet, MAPs = yummy_load(datadir_main = datadir,encode_labels=True,)
+</code></pre>
+
+<p><br />
+<br /></p>
+<hr />
+
+<p><br /></p>
+
+<div class="column-box">
+<div class="gallary-card-nb" style="width: 12rem;height:25rem;">
+<br />
 <center>
-  <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_blank"><img src="/assets/imgs/yummy_icon.png" alt="Yummy" style="width:80%" /></a>
+  <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_blank">
+  <img src="/assets/imgs/yummy_icon.png" alt="Yummy" style="width:80%" /></a>
   </center>
   <div class="card-body">
     <h5 class="card-title" style="text-align: center;"><b>A Starter-kit</b></h5>
     <h5 class="card-title" style="text-align: center;"><b>Yummy Dataset</b></h5>
-    <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_blank"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab\" /></a>
+    <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_parent"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab" /></a>
+    <a href="https://mybinder.org/v2/gh/MLEndDatasets/Notebooks/HEAD?labpath=Yummy_small_Getting_Started_kit_v1_binder.ipynb" target="_blank"> <img src="https://mybinder.org/badge_logo.svg" alt="Open In Binder\" /></a>
   </div>
 </div>
+</div>
+
+<p><br /></p>
+<hr />
+
+<h3 id="mlend-documentation">MLEnd Documentation</h3>
+
+<p>For mlend documentation use <code>help(fun)</code> in python terminal or Jupyter-notebook. Alternately, check out</p>
+<h4><a href="https://mlend.readthedocs.io/" target="_blank">MLEnd Documentation</a></h4>
+
+<p><br /></p>
+
+<!-- <pre><code class="python">import mlend-->
+<!-- from mlend import download_yummy_small, yummy_small_load, download_yummy, yummy_load -->
+<!-- help(download_yummy_small) -->
+<!-- help(yummy_small_load) -->
+<!-- help(download_yummy) -->
+<!-- help(yummy_load) -->
+<!-- </code> -->
+<!-- </pre> -->
+
+<!-- <ul>
+<li><code>help(download_yummy_small)</code></li>
+<li><code>help(yummy_small_load)</code></li>
+<li><code>help(download_yummy)</code></li>
+<li><code>help(yummy_load)</code></li>
+</ul> -->
+
+<!-- <div class="card" style="width: 12rem;">
+<center>
+  <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_blank"><img src= "/assets/imgs/yummy_icon.png" alt="Yummy" style="width:80%"></a>
+  </center>
+  <div class="card-body">
+    <h5 class="card-title" style="text-align: center;"><b>A Starter-kit</b></h5>
+    <h5 class="card-title" style="text-align: center;"><b>Yummy Dataset</b></h5>
+    <a href="https://colab.research.google.com/github/MLEndDatasets/Notebooks/blob/main/MLEnd_2023_Starter_kit.ipynb" target="_blank"> <img src="https://colab.research.google.com/assets/colab-badge.svg" alt="Open In Colab\"/></a>
+  </div>
+</div> -->
 
     <!-- </article> -->
     </div>
